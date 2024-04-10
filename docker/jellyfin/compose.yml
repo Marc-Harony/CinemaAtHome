@@ -1,0 +1,29 @@
+---
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
+      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
+      - /path/to/your/config:/config
+      - /path/to/your/media:/media
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128                               #To have hardware acceleration with Intel GPU (more info in README)
+    group_add:
+      - "110"                                                                 #To have access to the GPU
+      - "44"                                                                  #To have access to the video group
+    networks:
+      - docker_net
+    ports:
+      - 8096:8096
+
+networks:
+  docker_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.69.0.0/24
+          gateway: 172.69.0.1
