@@ -11,8 +11,7 @@ This repo aims to guide you through the creation of you own self-hosted streamin
 # Tree Infrasctructure
 
 ```bash
-host:/docker$ tree -L 2
-.
+/docker
 ├── jellyfin
 │   ├── config
 │   └── docker-compose.yaml
