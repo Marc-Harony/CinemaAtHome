@@ -27,8 +27,8 @@ This repo aims to guide you through the creation of you own self-hosted streamin
 
 # Video Streaming with JELLYFIN
 
-![README.md](./docker/jellyfin/README.md)
+![Full documentation here!](./docker/jellyfin/README.md)
 
 # Reverse Proxy with NGINX REVERSE PROXY (NPM)
 
-![README.md](./docker/proxy/README.md)
+![Full documentation here!](./docker/proxy/README.md)
