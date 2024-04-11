@@ -1,9 +1,9 @@
 ---
 services:
   cloudflared:
+    image: cloudflare/cloudflared
     container_name: cloudflare
     restart: always
-    image: cloudflare/cloudflared
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/localtime:/etc/timezone:ro

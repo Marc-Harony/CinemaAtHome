@@ -72,7 +72,7 @@ Finally, we define the `restart` policy to `always` so the container will always
 </details><br>
 
 The two first volumes are used to synchronize the time of the container with the host. This is useful for logs and other time-related operations.<br>
-Then, we define where we want to store the configuration files of the service. This folder will contain information about the users and how Jellyfin is configured.<br>
+Then, we define where we want to store the configuration files of the service. This folder will contain information about the users and how `Jellyfin` is configured.<br>
 Finally, we define where we want to store the media files. This folder will contain all the movies, series, music, etc. that you want to stream. It is recommended to use a dedicated disk for this folder.
 
 ## Transcoding (Intel Integrated GPU ONLY)

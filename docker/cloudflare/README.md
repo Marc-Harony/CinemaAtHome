@@ -135,7 +135,7 @@ networks:
 Then, we ask the container to use the network `docker_net` with `networks: #1`.
 
 
-The part `networks: #2` is different from the `Jellyfin` service. We are using an external network called `jellyfin_docker_net`. This network is created in the `compose.yml` file of the `Jellyfin` service. This way, the `Jellyfin` service and the `Cloudflared` service will be able to communicate with each other and also with all the other services in the same network.
+The part `networks: #2` is different from the [`Jellyfin` service](../jellyfin/compose.yml). We are using an external network called `jellyfin_docker_net`. This network is created in the `compose.yml` file of the `Jellyfin` service. This way, the `Jellyfin` service and the `Cloudflared` service will be able to communicate with each other and also with all the other services in the same network.
 
 
 # Run the container

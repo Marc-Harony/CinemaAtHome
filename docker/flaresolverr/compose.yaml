@@ -1,0 +1,19 @@
+---
+services:
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
+      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
+      - /path/to/your/config:/config
+    networks:
+      - docker_net
+    ports:
+      - "8191:8191"
+
+networks:
+  docker_net:
+    external:
+      name: jellyfin_docker_net

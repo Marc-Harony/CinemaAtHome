@@ -11,8 +11,8 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/localtime:/etc/timezone:ro
-      - ./data:/data
-      - ./certs:/etc/letsencrypt
+      - /path/to/your/data:/data
+      - /path/to/your/certs:/etc/letsencrypt
     networks:
       - docker_net
 

@@ -62,7 +62,8 @@ At the end of this documentation, you will have a fully functional video streami
 - [Tree Infrasctructure](#tree-infrasctructure)
 - [Video Streaming with JELLYFIN](#video-streaming-with-jellyfin)
 - [Reverse Proxy with NGINX REVERSE PROXY (NPM)](#reverse-proxy-with-nginx-reverse-proxy-npm)
-- [(OPTIONAL) WAN access with CLOUDFLARE](#optional-wan-access-with-cloudflare)
+- [(OPTIONAL but really cool) WAN access with CLOUDFLARE](#optional-but-really-cool-wan-access-with-cloudflare)
+- [(OPTIONAL but useful) Bypassing Cloudflare's CAPTCHA with FLARESOLVERR](#optional-but-useful-bypassing-cloudflares-captcha-with-flaresolverr)
 
 # Tree Infrasctructure
 
@@ -91,7 +92,7 @@ At the end of this documentation, you will have a fully functional video streami
 │   │   └── [...]
 │   ├── docker-compose.yaml
 │   └── gluetun/
-│   │   └── [...]
+│       └── [...]
 ├── radarr/
 │   ├── config/
 │   │   └── [...]
@@ -122,10 +123,17 @@ Now that Jellyfin is up and running, we will secure the access to it with a Reve
 
 ![Full documentation here!](./docker/proxy/README.md)
 
-# (OPTIONAL) WAN access with CLOUDFLARE
+# (OPTIONAL but really cool) WAN access with CLOUDFLARE
 
 This part is optional but really cool. With Cloudflare, you will be able to access your services from the WAN without having to expose any ports of your router to the internet or to expose your public IP address.
 You will need to create a free account on Cloudflare to manage your tunnels.
 For this part to work, you will need to have a domain name.
 
 ![Full documentation here!](./docker/cloudflare/README.md)
+
+# (OPTIONAL but useful) Bypassing Cloudflare's CAPTCHA with FLARESOLVERR
+
+This part is optional but really useful. Cloudflare's CAPTCHA can be annoying, especially when you wan't to automate **COMPLETELY LEGAL** torrent downloads.
+This service will allow you to bypass Cloudflare's CAPTCHA and access the services without any human interaction, pretty nice huh?
+
+![Full documentation here!](./docker/flaresolverr/README.md)
