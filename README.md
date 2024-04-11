@@ -60,6 +60,7 @@ At the end of this documentation, you will have a fully functional video streami
     - [Optional](#optional)
 - [Table of contents](#table-of-contents)
 - [Tree Infrasctructure](#tree-infrasctructure)
+- [How is this sh\*t gonna work?](#how-is-this-sht-gonna-work)
 - [Video Streaming with JELLYFIN](#video-streaming-with-jellyfin)
 - [Reverse Proxy with NGINX REVERSE PROXY (NPM)](#reverse-proxy-with-nginx-reverse-proxy-npm)
 - [(OPTIONAL but really cool) WAN access with CLOUDFLARE](#optional-but-really-cool-wan-access-with-cloudflare)
@@ -111,6 +112,10 @@ At the end of this documentation, you will have a fully functional video streami
     └── docker-compose.yaml
 ```
 
+# How is this sh*t gonna work?
+
+*Insert a nice drawn schema here*
+
 # Video Streaming with JELLYFIN
 
 We start the infrasctructure with a video streaming server. It will be exposed to your LAN so every device connected to the same network will be able to access it.
@@ -134,6 +139,6 @@ For this part to work, you will need to have a domain name.
 # (OPTIONAL but useful) Bypassing Cloudflare's CAPTCHA with FLARESOLVERR
 
 This part is optional but really useful. Cloudflare's CAPTCHA can be annoying, especially when you wan't to automate **COMPLETELY LEGAL** torrent downloads.
-This service will allow you to bypass Cloudflare's CAPTCHA and access the services without any human interaction, pretty nice huh?
+This service will allow you to bypass these CAPTCHA and access the services without any human interaction, pretty nice huh?
 
 ![Full documentation here!](./docker/flaresolverr/README.md)

@@ -1,3 +1,4 @@
+---
 services:
   proxy:
     image: jc21/nginx-proxy-manager
