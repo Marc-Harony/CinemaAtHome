@@ -24,11 +24,40 @@ At the end of this documentation, you will have a fully functional video streami
 
 > ☝🏻 *Compared to a subscription to netflix or another streaming platform, the investment is derisory.*  
 
+## Prerequisites
+
+### Mandatory
+
+#### Hardware
+
+- A computer or a Raspberry Pi to host the services.
+- A high-capacity storage device to store your movies and series.
+
+#### Software
+
+- A Linux distribution installed on your host and a basic knowledge of the CLI.
+- An Linux account with sudo privileges.
+- Docker and Docker Compose installed on your host. [See the official documentation based on your distribution](https://docs.docker.com/get-docker/)
+
+### Optional
+
+- A domain name to access your services from the internet.
+- A Cloudflare account to manage your tunnels and generate SSL certificates.
+
+> 💡 *We'll be using Docker throughout this project. You don't necessarily need to know anything about this technology, but it's always better to know and understand what you're doing.*
+
+> ☝🏻 *I'll try to be as clear as possible, so that anyone with even the slightest computer/network knowledge can understand what I'm talking about.*
+
 # Table of contents
 
 - [CinemaAtHome](#cinemaathome)
   - [Introduction](#introduction)
   - [Estimated cost](#estimated-cost)
+  - [Prerequisites](#prerequisites)
+    - [Mandatory](#mandatory)
+      - [Hardware](#hardware)
+      - [Software](#software)
+    - [Optional](#optional)
 - [Table of contents](#table-of-contents)
 - [Tree Infrasctructure](#tree-infrasctructure)
 - [Video Streaming with JELLYFIN](#video-streaming-with-jellyfin)
