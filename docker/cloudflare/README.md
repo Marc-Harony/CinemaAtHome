@@ -90,7 +90,6 @@ To get your token, you'll need to go to the [Cloudflare dashboard](https://one.d
 ##### Step 4.1 - Copy the Docker command
 
 ![Copy Docker command](./.attachments/tunnel_command.png)
-![alt text](image.png)
 
 ##### Step 4.2 - Get your token
 
