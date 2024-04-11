@@ -62,6 +62,7 @@ At the end of this documentation, you will have a fully functional video streami
 - [Tree Infrasctructure](#tree-infrasctructure)
 - [Video Streaming with JELLYFIN](#video-streaming-with-jellyfin)
 - [Reverse Proxy with NGINX REVERSE PROXY (NPM)](#reverse-proxy-with-nginx-reverse-proxy-npm)
+- [(OPTIONAL) WAN access with CLOUDFLARE](#optional-wan-access-with-cloudflare)
 
 # Tree Infrasctructure
 
@@ -77,6 +78,10 @@ At the end of this documentation, you will have a fully functional video streami
 │   ├── data/
 │   │   ├── [...]
 │   └── docker-compose.yaml
+#============= Optional but really cool =============#
+├── cloudflare/ # WAN access w/o exposing ports      #
+│   └── docker-compose.yaml                          #
+#====================================================#
 ```
 
 # Video Streaming with JELLYFIN
@@ -90,3 +95,11 @@ We start the infrasctructure with a video streaming server. It will be exposed t
 Now that Jellyfin is up and running, we will secure the access to it with a Reverse Proxy. This will allow you to add SSL encryption and access it with a domain name. Additionally, you will be able to access the service without having to expose its ports to the LAN!
 
 ![Full documentation here!](./docker/proxy/README.md)
+
+# (OPTIONAL) WAN access with CLOUDFLARE
+
+This part is optional but really cool. With Cloudflare, you will be able to access your services from the WAN without having to expose any ports of your router to the internet or to expose your public IP address.
+You will need to create a free account on Cloudflare to manage your tunnels.
+For this part to work, you will need to have a domain name.
+
+![Full documentation here!](./docker/cloudflare/README.md)

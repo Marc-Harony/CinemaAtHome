@@ -1,7 +1,7 @@
 # Service
-- [service](https://jellyfin.org/)
+- [NGINX Proxy Manager](https://nginxproxymanager.com/)
 
-*Jellyfin is the Free Software Media System that puts you in control of managing and streaming your media. There are no strings attached, no premium licenses or features, and no hidden fees.*
+*NGINX Proxy Manager (NPM) is a cool reverse proxy with a nice GUI to manage your reverse proxies. You can also generate SSL certificates with Let's Encrypt and it will automatically renew them for you.*
 
 # Table of contents
 
@@ -95,7 +95,7 @@ networks:                   #2
 ```
 </details>
 
-Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `PORT` of the container to the host.
+Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `80 ; 81 ; 443` of the container to the host.
 
 - 80:80   is the default port for HTTP
 - 81:81   is the default port for the WebGUI

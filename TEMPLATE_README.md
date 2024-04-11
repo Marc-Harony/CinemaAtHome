@@ -26,6 +26,7 @@ You can find client applications for:
 <summary>Click to expand</summary>
 
 ```yml
+---
 services:
 
 ```
@@ -85,14 +86,14 @@ networks:
 ```
 </details>
 
-For this part, will first look at `networks: #2`:
- -
-<br>
+Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `PORTS` of the container to the host.
 
-Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `PORT` of the container to the host. 
+- 80:80   is the default port for HTTP
+- 
 
-> ⚠️ *At the end of the configuration, you will have to comment or remove the `ports` section as we don't want to expose any ports of the host (we will use a Reverse Proxy instead).*
+> ⚠️ *At the end of the configuration, you will have to comment or remove the `- 81:81` section as we don't want to expose the WebGUI ports of the host.*
 
+The part `networks: #2` is different from the `Jellyfin` service. We are using an external network called `jellyfin_docker_net`. This network is created in the `compose.yml` file of the `Jellyfin` service. This way, the `Jellyfin` service and the `Proxy` service will be able to communicate with each other and also with all the other services in the same network.
 
 # Run the container
 To run the container, you can use the following command:

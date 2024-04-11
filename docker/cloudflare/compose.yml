@@ -1,0 +1,17 @@
+---
+services:
+  cloudflared:
+    container_name: cloudflare
+    restart: always
+    image: cloudflare/cloudflared
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/timezone:ro
+    command: tunnel --no-autoupdate run --token <token_here>
+    networks:
+      - docker_net
+
+networks:
+  docker_net:
+    external:
+      name: jellyfin_docker_net
