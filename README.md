@@ -70,18 +70,44 @@ At the end of this documentation, you will have a fully functional video streami
 /docker/
 ├── jellyfin/
 │   ├── config/
-│   │   ├── [...]
+│   │   └── [...]
 │   └── docker-compose.yaml
 ├── proxy/
 │   ├── certs/
-│   │   ├── [...]
+│   │   └── [...]
 │   ├── data/
-│   │   ├── [...]
+│   │   └── [...]
 │   └── docker-compose.yaml
 #============= Optional but really cool =============#
 ├── cloudflare/ # WAN access w/o exposing ports      #
 │   └── docker-compose.yaml                          #
 #====================================================#
+├── flaresolverr/
+│   ├── config/
+│   │   └── [...]
+│   └── docker-compose.yaml
+├── qbittorrent/
+│   ├── config/
+│   │   └── [...]
+│   ├── docker-compose.yaml
+│   └── gluetun/
+│   │   └── [...]
+├── radarr/
+│   ├── config/
+│   │   └── [...]
+│   └── docker-compose.yaml
+├── sonarr/
+│   ├── config/
+│   │   └── [...]
+│   └── docker-compose.yaml
+├── prowlarr/
+│   ├── config/
+│   │   └── [...]
+│   └── docker-compose.yaml
+└── jellyseerr/
+    ├── config/
+    │   └── [...]
+    └── docker-compose.yaml
 ```
 
 # Video Streaming with JELLYFIN
