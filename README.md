@@ -9,7 +9,10 @@ At the end of this documentation, you will have a fully functional video streami
 
 This project is for educational purposes only. I do not encourage the use of this project to download or distribute copyrighted material. The project is intended to be used to stream your own movies and series.<br>
 Downloading or distributing copyrighted material without permission is illegal and can have serious consequences depending on your local laws.
-![Leave alone the multimillion dollar company](leave_alone_meme.jpg)
+
+<p align="center">
+  <img src="./.attachment/leave_alone_meme.jpg" />
+</p>
 
 ## Estimated cost
 
