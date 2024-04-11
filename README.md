@@ -5,7 +5,7 @@
 This repo aims to guide you through the creation of you own self-hosted streaming server.
 At the end of this documentation, you will have a fully functional video streaming server accessible from your LAN and the internet, without having to expose any ports of your router to the internet nor to expose your public IP address.
 
-# <img src="./.attachment/would_you_download_a_car.png" height="30"> DISCLAIMER <img src="./.attachment/would_you_download_a_car.png" height="30">
+## <img src="./.attachment/would_you_download_a_car.png" height="30"> DISCLAIMER <img src="./.attachment/would_you_download_a_car.png" height="30">
 This project is for educational purposes only. I do not encourage the use of this project to download or distribute copyrighted material. The project is intended to be used to stream your own movies and series.<br>
 
 Downloading or distributing copyrighted material without permission is illegal and can have serious consequences depending on your local laws.
@@ -61,7 +61,7 @@ Downloading or distributing copyrighted material without permission is illegal a
 
 - [CinemaAtHome](#cinemaathome)
   - [Introduction](#introduction)
-- [ DISCLAIMER ](#-disclaimer-)
+  - [ DISCLAIMER ](#-disclaimer-)
   - [Estimated cost](#estimated-cost)
   - [Prerequisites](#prerequisites)
     - [Mandatory](#mandatory)
