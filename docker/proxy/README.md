@@ -117,3 +117,5 @@ docker-compose -f /path/to/your/compose.yml up -d
 You'll be able to access the web interface of NPM by going to `http://your-server-ip:81` or `http://your-domain-name:81`.
 
 # Service Configuration
+
+Coming soon!

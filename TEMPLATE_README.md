@@ -104,3 +104,7 @@ Alternatively, you can specify the path to the compose file:
 docker-compose -f /path/to/your/compose.yml up -d
 ```
 You'll be able to access the web interface of SERVICE by going to `http://your-server-ip:PORT` or `http://your-domain-name:PORT`.
+
+# Service Configuration
+
+Coming soon!

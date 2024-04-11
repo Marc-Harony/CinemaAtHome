@@ -139,3 +139,5 @@ docker-compose -f /path/to/your/compose.yml up -d
 You'll be able to access the web interface of Jellyfin by going to `http://your-server-ip:8096` or `http://your-domain-name:8096`.
 
 # Service Configuration
+
+Coming soon!
