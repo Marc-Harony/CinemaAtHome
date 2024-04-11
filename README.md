@@ -31,7 +31,8 @@ Downloading or distributing copyrighted material without permission is illegal a
 - **Subscrition fees**: 0€
   - You will not need to pay any subscription fees to use the services. Everything is self-hosted and free to use.
 
-> ☝🏻 *Compared to a subscription to netflix or another streaming platform, the investment is derisory.*  
+> ☝🏻 *A friend told me that compared to a subscription to Netflix or another streaming platform, the investment is derisory. It's true, but remember that it's illegal to download copyrighted stuff :wink:*  
+
 
 ## Prerequisites
 
