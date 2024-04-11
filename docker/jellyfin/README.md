@@ -14,6 +14,7 @@
   - [Transcoding (Intel Integrated GPU ONLY)](#transcoding-intel-integrated-gpu-only)
   - [Network](#network)
 - [Run the container](#run-the-container)
+- [Service Configuration](#service-configuration)
 
 # Compose file
 
@@ -23,7 +24,7 @@
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [JJellyfin](https://jellyfin.org/) as a streaming service. It is a completely free and open source alternative to Plex with a modern interface.<br>
+In this infrasctrucutre, we will use [Jellyfin](https://jellyfin.org/) as a streaming service. It is a completely free and open source alternative to Plex with a modern interface.<br>
 You can find client applications for:
 - [Android](https://play.google.com/store/apps/details?id=org.jellyfin.mobile)
 - [iOS](https://apps.apple.com/us/app/jellyfin-mobile/id1480192618?mt=8)
@@ -39,6 +40,7 @@ You can also play your favourite movies and series on your browser by accessing 
 <summary>Click to expand</summary>
 
 ```yml
+---
 services:
   jellyfin:
     image: jellyfin/jellyfin
@@ -120,7 +122,10 @@ For this part, will first look at `networks: #2`:
  - We define a subnet for the network. This is the IP range that the containers will use to communicate with each other. The gateway will be the IP address of the "virtual" docker network card on the host.
 <br>
 
-Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `8096` of the container to the host. At the end of the configuration, you will have to comment the `ports` section as we don't wand to expose any ports of the host (we will use a Reverse Proxy instead).
+Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `8096` of the container to the host.
+
+> ⚠️ *At the end of the configuration, you will have to comment or remove the `ports` section as we don't want to expose any ports of the host (we will use a Reverse Proxy instead).*
+
 
 # Run the container
 To run the container, you can use the following command:
@@ -132,3 +137,5 @@ Alternatively, you can specify the path to the compose file:
 docker-compose -f /path/to/your/compose.yml up -d
 ```
 You'll be able to access the web interface of Jellyfin by going to `http://your-server-ip:8096` or `http://your-domain-name:8096`.
+
+# Service Configuration

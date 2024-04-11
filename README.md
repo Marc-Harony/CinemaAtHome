@@ -6,18 +6,29 @@ This repo aims to guide you through the creation of you own self-hosted streamin
 - [CinemaAtHome](#cinemaathome)
 - [Table of contents](#table-of-contents)
 - [Tree Infrasctructure](#tree-infrasctructure)
-- [Jellyfin for Video Streaming](#jellyfin-for-video-streaming)
+- [Video Streaming with JELLYFIN](#video-streaming-with-jellyfin)
+- [Reverse Proxy with NGINX REVERSE PROXY (NPM)](#reverse-proxy-with-nginx-reverse-proxy-npm)
 
 # Tree Infrasctructure
 
 ```bash
-/docker
-├── jellyfin
-│   ├── config
+/docker/
+├── jellyfin/
+│   ├── config/
+│   │   ├── [...]
 │   └── docker-compose.yaml
-
+├── proxy/
+│   ├── certs/
+│   │   ├── [...]
+│   ├── data/
+│   │   ├── [...]
+│   └── docker-compose.yaml
 ```
 
-# Jellyfin for Video Streaming
+# Video Streaming with JELLYFIN
 
 ![README.md](./docker/jellyfin/README.md)
+
+# Reverse Proxy with NGINX REVERSE PROXY (NPM)
+
+![README.md](./docker/proxy/README.md)

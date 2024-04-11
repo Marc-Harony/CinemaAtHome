@@ -1,0 +1,22 @@
+services:
+  proxy:
+    image: jc21/nginx-proxy-manager
+    restart: unless-stopped
+    container_name: proxy
+    hostname: proxy
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/timezone:ro
+      - ./data:/data
+      - ./certs:/etc/letsencrypt
+    networks:
+      - docker_net
+
+networks:
+  docker_net:
+    external:
+      name: jellyfin_docker_net
