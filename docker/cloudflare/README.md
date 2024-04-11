@@ -5,6 +5,25 @@
 
 # Table of contents
 
+- [Service](#service)
+- [Table of contents](#table-of-contents)
+- [Compose file](#compose-file)
+- [Explanation of the compose file:](#explanation-of-the-compose-file)
+  - [General information about the container](#general-information-about-the-container)
+  - [Volumes](#volumes)
+  - [Tunnel configuration](#tunnel-configuration)
+    - [Tunnel Creation](#tunnel-creation)
+      - [Step 1 - Create a new tunnel](#step-1---create-a-new-tunnel)
+      - [Step 2 - Select the type of tunnel (Cloudflared)](#step-2---select-the-type-of-tunnel-cloudflared)
+      - [Step 3 - Name your tunnel](#step-3---name-your-tunnel)
+      - [Step 4 - Get your token](#step-4---get-your-token)
+        - [Step 4.1 - Copy the Docker command](#step-41---copy-the-docker-command)
+        - [Step 4.2 - Get your token](#step-42---get-your-token)
+      - [Step 5 - Add the token to the compose file](#step-5---add-the-token-to-the-compose-file)
+  - [Network](#network)
+- [Run the container](#run-the-container)
+- [Service Configuration](#service-configuration)
+
 # Compose file
 
 <details>
