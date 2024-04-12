@@ -28,6 +28,8 @@ Downloading or distributing copyrighted material without permission is illegal a
   - It depends on your country and the power consumption of your hardware. You can check the power consumption of your hardware and calculate the cost of running it 24/7.
 - **Internet**: ¯\\\_(ツ)_/¯ 
   - It depends on your internet plan and also your country. You will need a decent upload speed to stream your movies and series from outside your LAN.
+- **VPN**: 0€ - 30€/year
+  - This is optional but recommended if you want to use the full potential of this project. You can use a free VPN but I recommend using a paid one for better security and privacy.
 - **Subscrition fees**: 0€
   - You will not need to pay any subscription fees to use the services. Everything is self-hosted and free to use.
 
@@ -76,6 +78,7 @@ Downloading or distributing copyrighted material without permission is illegal a
 - [Reverse Proxy with NGINX REVERSE PROXY (NPM)](#reverse-proxy-with-nginx-reverse-proxy-npm)
 - [(OPTIONAL but really cool) WAN access with CLOUDFLARE](#optional-but-really-cool-wan-access-with-cloudflare)
 - [(OPTIONAL but useful) Bypassing Cloudflare's CAPTCHA with FLARESOLVERR](#optional-but-useful-bypassing-cloudflares-captcha-with-flaresolverr)
+- [**LEGALLY** download movies and series with QBITTORRENT](#legally-download-movies-and-series-with-qbittorrent)
 
 # Tree Infrasctructure
 
@@ -153,3 +156,9 @@ This part is optional but really useful. Cloudflare's CAPTCHA can be annoying, e
 This service will allow you to bypass these CAPTCHA and access the services without any human interaction, pretty nice huh?
 
 ![Full documentation here!](./docker/flaresolverr/README.md)
+
+# **LEGALLY** download movies and series with QBITTORRENT
+
+What's good with this project is that will be able to watch your favourite movies and series from anywhere, but what about watching series that you don't have yet? That's where qBittorrent comes in handy. **Again**, I do not encourage to download copyrighted material, this is only for educational purposes.
+
+![Full documentation here!](./docker/qbittorrent/README.md)

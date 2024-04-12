@@ -1,0 +1,46 @@
+---
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent
+    container_name: qbittorrent
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
+      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
+      - /path/to/your/config:/config
+      - /path/to/your/downloads:/data/downloads
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun  # Déclarez la dépendance à gluetun
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+
+
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    volumes:
+      - ./gluetun:/gluetun
+    environment:
+      - VPN_SERVICE_PROVIDER=your_prodiver
+      - OPENVPN_USER=vpn_username
+      - OPENVPN_PASSWORD=vpn_password
+      - SERVER_COUNTRIES=any_country
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8080:8080 # qbittorrent
+    networks:
+      - docker_net
+
+networks:
+  docker_net:
+    external:
+      name: jellyfin_docker_net
