@@ -3,14 +3,9 @@
 
 *This service will allows you to access your service from the WAN without exposing any ports of your router nor using your public IP address.*
 
-# 🥖Looking for a french video-guide?🥖
-
-Coming soon!
-
 # Table of contents
 
 - [Service](#service)
-- [🥖Looking for a french video-guide?🥖](#looking-for-a-french-video-guide)
 - [Table of contents](#table-of-contents)
 - [Compose file](#compose-file)
 - [Explanation of the compose file:](#explanation-of-the-compose-file)

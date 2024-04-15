@@ -1,0 +1,26 @@
+---
+services:
+  radarr:
+    container_name: radarr
+    image: ghcr.io/hotio/radarr
+    ports:
+      - "7878:7878"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+    volumes:
+      - ./config:/config
+      - /mnt/external_BAB/qbittorrent/downloads:/data/downloads
+      - /mnt/external_BAB/jellyfin/media/films:/data
+      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
+      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
+    restart: unless-stopped
+    networks:
+      - docker_net
+
+
+networks:
+  docker_net:
+    external:
+      name: jellyfin_docker_net
