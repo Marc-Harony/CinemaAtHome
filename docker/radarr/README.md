@@ -27,7 +27,6 @@
 
 In this infrasctructure, we will use [RADARR](https://radarr.video/) as a service. <br>
 
-
 # Explanation of the compose file:
 
 ## General information about the container

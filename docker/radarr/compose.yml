@@ -1,23 +1,23 @@
 ---
 services:
   radarr:
-    container_name: radarr
     image: ghcr.io/hotio/radarr
-    ports:
-      - "7878:7878"
+    container_name: radarr
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
+      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
+      - ./config:/config
+      - /mnt/external_BAB/qbittorrent/downloads:/data/downloads
+      - /mnt/external_BAB/jellyfin/media/films:/data
     environment:
       - PUID=1000
       - PGID=1000
       - UMASK=002
-    volumes:
-      - ./config:/config
-      - /mnt/external_BAB/qbittorrent/downloads:/data/downloads
-      - /mnt/external_BAB/jellyfin/media/films:/data
-      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
-      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
-    restart: unless-stopped
     networks:
       - docker_net
+    ports:
+      - "7878:7878"
 
 
 networks:

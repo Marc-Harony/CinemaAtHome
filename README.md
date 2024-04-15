@@ -83,7 +83,7 @@ Downloading or distributing copyrighted material without permission is illegal a
 - A Linux distribution installed on your host and a basic knowledge of the CLI.
 - An Linux account with sudo privileges.
 - Docker and Docker Compose installed on your host. [See the official documentation based on your distribution](https://docs.docker.com/get-docker/)
-  - > ☝🏻 * If you're using a RedHat-based distro, you can follow [this doc i've made](https://github.com/Marc-Harony/HomeNextcloudServer/blob/master/README.md#step-1-install-dependencies-and-configure-the-host) to install and configure Docker.
+  - > ☝🏻 *If you're using a RedHat-based distro, you can follow [this doc i've made](https://github.com/Marc-Harony/HomeNextcloudServer/blob/master/README.md#step-1-install-dependencies-and-configure-the-host) to install and configure Docker.*
 
 ### Optional
 
