@@ -35,7 +35,7 @@ The goal of this project is to see what it's possible to do with Docker's Networ
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [qBitTorrent](https://www.qbittorrent.org/) as a Bittorrent client that will be running behind a dockerized VPN client [Gluetun](https://github.com/qdm12/gluetun). <br>
+In this infrastructure, we will use [qBitTorrent](https://www.qbittorrent.org/) as a Bittorrent client that will be running behind a dockerized VPN client [Gluetun](https://github.com/qdm12/gluetun). <br>
 
 
 # Explanation of the compose file:

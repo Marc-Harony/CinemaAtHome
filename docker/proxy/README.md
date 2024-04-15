@@ -24,7 +24,7 @@
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [NGINX Proxy Manager](https://nginxproxymanager.com/) as a Reverse Proxy. <br>
+In this infrastructure, we will use [NGINX Proxy Manager](https://nginxproxymanager.com/) as a Reverse Proxy. <br>
 It's an easy-to-use application with a smooth GUI to manage your reverse proxies. You can also generate SSL certificates with Let's Encrypt and it will automatically renew them for you.<br>
 > 💡 *You will need to get a domain name to fully use the service. Otherwise you'll not be able to generate certificates nor acces your server from the WAN*<br>
 

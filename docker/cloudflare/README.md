@@ -32,7 +32,7 @@
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [Cloudflared](https://one.dash.cloudflare.com/5d727414f06a81a09028b3940babbe2b/networks/tunnels) as a tunneling service. <br>
+In this infrastructure, we will use [Cloudflared](https://one.dash.cloudflare.com/5d727414f06a81a09028b3940babbe2b/networks/tunnels) as a tunneling service. <br>
 
 > 💡 *You will need to get a domain name to use the service.*<br>
 

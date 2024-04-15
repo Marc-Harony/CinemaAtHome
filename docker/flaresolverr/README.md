@@ -23,7 +23,7 @@
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [Flaresolverr](https://github.com/FlareSolverr/FlareSolverr) as a service. <br>
+In this infrastructure, we will use [Flaresolverr](https://github.com/FlareSolverr/FlareSolverr) as a service. <br>
 
 # Explanation of the compose file:
 

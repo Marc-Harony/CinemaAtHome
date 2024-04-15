@@ -1,9 +1,21 @@
 # Service
-- [service](https://jellyfin.org/)
+- [RADARR](https://radarr.video/)
 
-*Jellyfin is the Free Software Media System that puts you in control of managing and streaming your media. There are no strings attached, no premium licenses or features, and no hidden fees.*
+*RADARR is a service that allows you to automatically download movies from your favorite indexers. It can also keep track of all your movies and notify you when a new one is available.*
 
 # Table of contents
+
+- [Service](#service)
+- [Table of contents](#table-of-contents)
+- [Compose file](#compose-file)
+- [Explanation of the compose file:](#explanation-of-the-compose-file)
+  - [General information about the container](#general-information-about-the-container)
+  - [Volumes](#volumes)
+  - [specific options](#specific-options)
+  - [Network](#network)
+- [Run the container](#run-the-container)
+- [Service Configuration](#service-configuration)
+
 
 # Compose file
 
@@ -13,10 +25,7 @@
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [SERVICE]() as a service. <br>
-You can find client applications for:
-- 
-
+In this infrasctructure, we will use [RADARR](https://radarr.video/) as a service. <br>
 
 
 # Explanation of the compose file:

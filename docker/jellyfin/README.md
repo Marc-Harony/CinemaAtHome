@@ -24,7 +24,7 @@
 ![compose.yml](./compose.yml)
 </details><br>
 
-In this infrasctrucutre, we will use [Jellyfin](https://jellyfin.org/) as a streaming service. It is a completely free and open source alternative to Plex with a modern interface.<br>
+In this infrastructure, we will use [Jellyfin](https://jellyfin.org/) as a streaming service. It is a completely free and open source alternative to Plex with a modern interface.<br>
 You can find client applications for:
 - [Android](https://play.google.com/store/apps/details?id=org.jellyfin.mobile)
 - [iOS](https://apps.apple.com/us/app/jellyfin-mobile/id1480192618?mt=8)
