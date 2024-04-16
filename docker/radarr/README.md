@@ -11,7 +11,7 @@
 - [Explanation of the compose file:](#explanation-of-the-compose-file)
   - [General information about the container](#general-information-about-the-container)
   - [Volumes](#volumes)
-  - [specific options](#specific-options)
+  - [Specific options](#specific-options)
   - [Network](#network)
 - [Run the container](#run-the-container)
 - [Service Configuration](#service-configuration)
@@ -34,14 +34,17 @@ In this infrasctructure, we will use [RADARR](https://radarr.video/) as a servic
 <summary>Click to expand</summary>
 
 ```yml
----
 services:
-
+  radarr:
+    image: ghcr.io/hotio/radarr
+    container_name: radarr
+    restart: always
+[...]
 ```
 </details><br>
 
-The first `SERVICE` defines the name of the service. This is the equivalent as the hostname of the container inside the docker network.<br>
-We are using the official image `SERVICE/SERVICE` from Docker Hub. With no tags, the service will always use the latest version of the image.<br>
+The first `radarr` defines the name of the service. This is the equivalent as the hostname of the container inside the docker network.<br>
+We are using the official image `ghcr.io/hotio/radarr` from GitHub repositoryes. With no tags, the service will always use the latest version of the image.<br>
 We define a `container_name` so it's easier to manage containers on our host.<br>
 Finally, we define the `restart` policy to `always` so the container will always restart if it stops or if the host reboots.<br>
 
@@ -55,27 +58,22 @@ Finally, we define the `restart` policy to `always` so the container will always
       - /etc/localtime:/etc/localtime:ro
       - /etc/localtime:/etc/timezone:ro
       - /path/to/your/config:/config
-      - 
+      - /path/to/your/downloads:/data/downloads
+      - /path/to/your/media/films:/data
 [...]
 ```
 </details><br>
 
 The two first volumes are used to synchronize the time of the container with the host. This is useful for logs and other time-related operations.<br>
 Then, we define where we want to store the configuration files of the service. This folder will contain information about the users and how Jellyfin is configured.<br>
+The third volume corresponds to the folder where [qBittorrent service](../qbittorrent/README.md) stores the downloaded files. You **HAVE TO** enter the same path as the one you entered in the `qbittorrent` service.<br>
+Finally, the last volume is the folder where the service will store the movies. I recommend using the same folder as the one used by the `Jellyfin` service. This way, the `Jellyfin` service will be able to access the movies downloaded by the `Radarr` service.
 
 
-## specific options
-> 💡 *If you want more info on transcoding configuration or for other GPU, check the [official documentation](https://jellyfin.org/docs/general/administration/hardware-acceleration.html)*
+## Specific options
 
-> 💡 *You may need to install drivers for your GPU, check the documentation for more info.*
-<details>
-<summary>Click to expand</summary>
+> 🔴 *There is no specific option for this service*
 
-```yml
-[...]
-[...]
-```
-</details>
 
 ## Network
 <details>
@@ -83,10 +81,11 @@ Then, we define where we want to store the configuration files of the service. T
 
 ```yml
 [...]
-    networks:                #1
+    networks:
       - docker_net
     ports:
-      - 
+      - "7878:7878"
+
 networks:
   docker_net:
     external:
@@ -94,14 +93,13 @@ networks:
 ```
 </details>
 
-Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `PORTS` of the container to the host.
+Then, we ask the container to use the network `docker_net` with `networks: #1` and we expose the port `7878` of the container to the host.
 
-- 80:80   is the default port for HTTP
-- 
+- 7878:7878   is the default port for Radarr's WebGUI.
 
-> ⚠️ *At the end of the configuration, you will have to comment or remove the `- 81:81` section as we don't want to expose the WebGUI ports of the host.*
+> ⚠️ *At the end of the configuration, you will have to comment or remove the entire `ports:` section as we don't want to expose the WebGUI ports of the host.*
 
-The part `networks: #2` is different from the [`Jellyfin` service](../jellyfin/compose.yml). We are using an external network called `jellyfin_docker_net`. This network is created in the `compose.yml` file of the `Jellyfin` service. This way, the `Jellyfin` service and the `Proxy` service will be able to communicate with each other and also with all the other services in the same network.
+The part `networks: #2` is different from the [`Jellyfin` service](../jellyfin/compose.yml). We are using an external network called `jellyfin_docker_net`. This network is created in the `compose.yml` file of the `Jellyfin` service. This way, the `Jellyfin` service and the `Radarr` service will be able to communicate with each other and also with all the other services in the same network.
 
 # Run the container
 To run the container, you can use the following command:
@@ -112,7 +110,7 @@ Alternatively, you can specify the path to the compose file:
 ```bash
 docker-compose -f /path/to/your/compose.yml up -d
 ```
-You'll be able to access the web interface of SERVICE by going to `http://your-server-ip:PORT` or `http://your-domain-name:PORT`.
+You'll be able to access the web interface of SERVICE by going to `http://your-server-ip:7878` or `http://your-domain-name:7878`.
 
 # Service Configuration
 

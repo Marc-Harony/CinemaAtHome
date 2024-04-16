@@ -1,15 +1,15 @@
 ---
 services:
-  radarr:
-    image: ghcr.io/hotio/radarr
-    container_name: radarr
+  sonarr:
+    image: ghcr.io/hotio/sonarr
+    container_name: sonarr
     restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
       - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
       - /path/to/your/config:/config
       - /path/to/your/downloads:/data/downloads #qBittorrent downloads folder
-      - /path/to/your/media/films:/data # Jellyfin films folder
+      - /path/to/your/media/series:/data # Jellyfin series folder
     environment:
       - PUID=1000
       - PGID=1000
@@ -17,7 +17,7 @@ services:
     networks:
       - docker_net
     ports:
-      - "7878:7878"
+      - "8989:8989"
 
 
 networks:
