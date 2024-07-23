@@ -1,0 +1,19 @@
+---
+services:
+  jellyseerr:
+    image: fallenbagel/jellyseerr
+    container_name: jellyseerr
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro                                      #To have the same time as the host
+      - /etc/localtime:/etc/timezone:ro                                       #To have the same time as the host
+      - /path/to/your/config:/app/config
+    networks:
+      - docker_net
+    ports:
+      - 5055:5055
+
+networks:
+  docker_net:
+    external:
+      name: jellyfin_docker_net
