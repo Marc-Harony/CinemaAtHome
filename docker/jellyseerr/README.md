@@ -11,13 +11,10 @@
 <summary>Click to expand</summary>
 
 ![compose.yml](./compose.yml)
+
 </details><br>
 
-In this infrasctrucutre, we will use [SERVICE]() as a service. <br>
-You can find client applications for:
-- 
-
-
+In this infrasctrucutre, we will use [Jellyseer](https://github.com/Fallenbagel/jellyseerr) as a service that will allow users to request movies and TV shows to be added to the Jellyfin library.
 
 # Explanation of the compose file:
 
